@@ -1,0 +1,44 @@
+{
+    "go.buildFlags": [],
+    "go.buildOnSave": "workspace",
+    "go.lintOnSave": "workspace",
+    "go.vetOnSave": "workspace",
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+    "gopls": {
+        "ui.semanticTokens": true,
+        "ui.completion.usePlaceholders": true,
+        "ui.diagnostic.analyses": {
+            "unusedparams": true,
+            "shadow": true,
+            "nilness": true,
+            "unusedwrite": true,
+            "useany": true
+        },
+        "ui.diagnostic.staticcheck": true
+    },
+    "[go]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        },
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.defaultFormatter": "golang.go"
+    },
+    "go.delveConfig": {
+        "dlvLoadConfig": {
+            "followPointers": true,
+            "maxVariableRecurse": 1,
+            "maxStringLen": 120,
+            "maxArrayValues": 64,
+            "maxStructFields": -1
+        },
+        "apiVersion": 2,
+        "showGlobalVariables": true
+    },
+    "go.showWelcome": false,
+    "go.enableCodeLens": {
+        "references": false,
+        "runtest": true
+    }
+}

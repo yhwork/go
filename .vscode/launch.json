@@ -1,0 +1,84 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "▶️ 运行当前文件",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${fileDirname}",
+            "console": "integratedTerminal",
+            "args": []
+        },
+        {
+            "name": "🚀 运行整个项目",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/go_demo",
+            "console": "integratedTerminal",
+            "args": []
+        },
+        {
+            "name": "🧪 运行当前测试文件",
+            "type": "go",
+            "request": "launch",
+            "mode": "test",
+            "program": "${fileDirname}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "🧪 运行单个测试函数",
+            "type": "go",
+            "request": "launch",
+            "mode": "test",
+            "program": "${workspaceFolder}",
+            "args": [
+                "-test.run",
+                "^Test[^a-z].*"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "🔍 调试带参数的程序",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${fileDirname}",
+            "console": "integratedTerminal",
+            "args": [
+                "--config",
+                "config.yaml"
+            ]
+        },
+        {
+            "name": "🌐 运行 Web 服务器 (Gin)",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${fileDirname}",
+            "console": "integratedTerminal",
+            "env": {
+                "GIN_MODE": "debug",
+                "PORT": "8080"
+            }
+        },
+        {
+            "name": "🔧 附加到进程",
+            "type": "go",
+            "request": "attach",
+            "mode": "local",
+            "processId": 0
+        },
+        {
+            "name": "🐛 Delve 直接调试",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "showLog": true,
+            "trace": "verbose"
+        }
+    ]
+}
