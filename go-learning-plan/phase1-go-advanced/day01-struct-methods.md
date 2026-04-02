@@ -7,7 +7,7 @@
 ---
 
 ## 知识点
-
+[go.mod](..%2F..%2Fgo_demo%2Fday01%2Fgo.mod)
 ### 1. 结构体定义
 
 ```go
